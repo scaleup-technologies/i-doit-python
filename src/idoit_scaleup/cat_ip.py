@@ -32,3 +32,10 @@ class IDoitIP(IDoitCategory):
 
     def convert_field_with_name_assigned_port(self,data):
         return data['assigned_port']['title']
+
+    def convert_field_with_name_dns_domain(self, data):
+        rtn=[]
+        if 'dns_domain' in data and data['dns_domain'] is not None:
+            for ele in data['dns_domain']:
+                rtn.append(ele['title'])
+        return rtn
