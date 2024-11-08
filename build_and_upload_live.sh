@@ -7,8 +7,8 @@ if [ ! -f ~/.pypirc ] ; then
    exit 1
 fi
 rm -rf dist
-python3 -m build
-python3 -m twine upload --repository pypi dist/*
+.venv/bin/python3 -m build
+.venv/bin/twine upload --repository pypi dist/*
 
 # FIXME Add gitlab tagging
 echo Install:

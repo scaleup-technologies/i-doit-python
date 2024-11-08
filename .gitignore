@@ -1,3 +1,4 @@
 dist
 example/idoit.json
 example/idoit_live.json
+.venv/
